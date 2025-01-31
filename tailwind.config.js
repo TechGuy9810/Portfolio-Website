@@ -59,7 +59,9 @@ export default {
     },
     backgroundImage: {
       'heroSectionImage': "url('/bgimage.png')",
-      'svgImage':"url('/svgImage.svg')"
+      'svgImage':"url('/svgImage.svg')",
+      'projectsBg':"url('./projectBg.svg')",
+      'skillsBg':"url('./bgSkillsContainer.svg')"
     }
     },
   },

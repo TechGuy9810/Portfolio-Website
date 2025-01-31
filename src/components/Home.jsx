@@ -137,7 +137,7 @@ scrollTrigger:{
    width:"fit-content",
    zIndex:"9999",
    fontSize:"1.2rem",
-   fontWeight:"800",
+   fontWeight:"1000",
    color:"white",
   });
 })
@@ -360,7 +360,8 @@ const tl2 = gsap.timeline({
     trigger: ".projectParentDiv", // Reference the parent container
     start: "top 90%", // Start when the top of the container is at 80% of the viewport
     end: "bottom 80%", // End when the bottom of the container is at 20% of the viewport // Smooth animation while scrolling
-    scrub:1
+    scrub:1,
+    snap: 1 / 3
   },
 });
 
@@ -466,7 +467,7 @@ tl2.to(".project-card1", {
       </div>
       
       
-      <div className={`skillsContainer lg:h-[60vh] h-[65vh] w-full bg-black flex flex-col items-center justify-center bg-[url('./bgSkillsContainer.svg')] bg-cover bg-center`}>
+      <div className={`skillsContainer lg:h-[60vh] h-[65vh] w-full flex flex-col items-center justify-center lg:bg-skillsBg bg-black bg-cover bg-center`}>
       <div className='skills lg:h-[15%] h-[10%] w-full flex justify-center items-end'>
         <p className='skillsHeading lg:text-[2rem] text-[1.5rem] text-white lg:font-bold font-normal font-Monoton tracking-wide'>My Skills</p>
       </div>
@@ -520,10 +521,10 @@ tl2.to(".project-card1", {
 <svg width="324" height="764" viewBox="0 0 324 764" fill="none" xmlns="http://www.w3.org/2000/svg" className='lg:hidden flex absolute'>
 <path ref={svgRefPhone} d="M18.1707 1C18.1707 1 4.85492 122.009 24.2626 159.205C43.6702 196.401 225.098 127.927 270.328 161.741C315.558 195.555 310.564 343.493 270.328 368.618C230.092 393.743 63.0887 303.699 25.372 365.018C-12.3447 426.338 1.52594 537.925 25.3719 575.966C49.218 614.007 270.617 546.378 300.023 575.966C329.429 605.553 320.829 763 320.829 763" stroke="white" strokeWidth="4"/>
 </svg>
-<div className='lg:h-[10%] lg:w-[5%] h-[7%] w-[14%] absolute lg:flex md:hidden flex top-[1%] lg:left-[15%] left-[10%] rounded-full overflow-hidden z-30'>
+<div className='lg:h-[10%] lg:w-[5%] h-[7%] w-[14%] absolute lg:flex md:hidden flex top-[0.5%] lg:left-[15%] left-[7%] rounded-full overflow-hidden z-30'>
   <img className='w-full h-full object-cover object-center' src="./profile.jpeg" alt="" />
 </div>
-<div className='classTenth lg:h-[30%] md:h-[10%] h-[13%] lg:w-[15%] md:w-[25%] w-[50%] lg:gap-0 gap-2 z-20 absolute lg:top-[6%] md:top-[4%] lg:left-[25%] md:left-[19%] top-[16%] left-[12%] flex flex-col justify-start items-center'>
+<div className='classTenth lg:h-[30%] md:h-[10%] h-[13%] lg:w-[15%] md:w-[25%] w-[50%] lg:gap-0 gap-2 z-20 absolute lg:top-[6%] md:top-[4%] lg:left-[25%] md:left-[19%] top-[13%] left-[12%] flex flex-col justify-start items-center'>
   <div className='h-[50%] w-full flex flex-col justify-center items-center'>
     <p className='text-white font-semibold lg:text-2xl text-md'>Class 10th</p>
     <p className='text-white font-semibold lg:hidden flex lg:opacity-0 opacity-1 lg:gap-2 items-center justify-center' ref={popupRefs[0]}>8.0 Cgpa <span className='font-normal text-gray-200'>(In Top 10)</span> <FaCircleCheck className='text-green-500'/></p>
@@ -550,7 +551,7 @@ tl2.to(".project-card1", {
   <div className='h-[80%] w-[80%] bg-white rounded-full'></div>
   </div>
 </div>
-<div className='secondYear lg:h-[30%] md:h-[20%] lg:w-[15%] md:w-[30%] w-[50%] h-[15%] z-20 absolute lg:top-[47%] md:top-[51%] lg:gap-0 gap-2 lg:left-[40%] md:left-[52%] top-[60%] left-[12%] flex flex-col justify-end items-center'>
+<div className='secondYear lg:h-[30%] md:h-[20%] lg:w-[15%] md:w-[30%] w-[50%] h-[15%] z-20 absolute lg:top-[47%] md:top-[51%] lg:gap-0 gap-2 lg:left-[40%] md:left-[52%] top-[62%] left-[12%] flex flex-col justify-end items-center'>
 <div className='h-[50%] w-full flex flex-col justify-center items-center'>
     <p className='text-white font-semibold lg:text-2xl text-md'>BCA 2nd Year</p>
     <p className='text-white font-semibold lg:hidden flex lg:opacity-0 opacity-1 lg:gap-2 items-center justify-center' ref={popupRefs[3]}>8.5 Cgpa <span className='font-normal text-gray-200'>(2022-2023)</span><FaCircleCheck className='text-green-500'/></p>
@@ -559,7 +560,7 @@ tl2.to(".project-card1", {
   <div className='h-[80%] w-[80%] bg-white rounded-full'></div>
   </div>
 </div>
-<div className='thirdYear lg:h-[30%] md:h-[20%] lg:w-[15%] md:w-[30%] w-[45%] h-[15%] z-20 absolute lg:top-[55%] md:top-[76%] top-[85%] lg:gap-0 gap-2 lg:left-[77%] md:left-[43%] left-[47%] flex flex-col justify-start lg:items-start items-end'>
+<div className='thirdYear lg:h-[30%] md:h-[20%] lg:w-[15%] md:w-[30%] w-[45%] h-[15%] z-20 absolute lg:top-[55%] md:top-[76%] top-[85%] lg:gap-0 gap-2 lg:left-[77%] md:left-[43%] left-[49%] flex flex-col justify-start lg:items-start items-end'>
 <div className='h-[50%] w-full flex flex-col justify-center items-center'>
     <p className='text-white font-semibold lg:text-2xl text-md'>BCA 3rd Year</p>
     <p className='text-white font-semibold lg:hidden flex lg:opacity-0 opacity-1 lg:gap-2 items-center justify-center' ref={popupRefs[4]}>8.5 Cgpa <span className='font-normal text-gray-200'>(2023-2024)</span><FaCircleCheck className='text-green-500'/></p>
@@ -573,7 +574,7 @@ tl2.to(".project-card1", {
 </div>
 </div>
 
-      <div className={`projects h-[100vh] w-full lg:flex lg:flex-col hidden overflow-hidden relative bg-[url('./projectBg.svg')] bg-cover bg-center`} ref={ProjectRef}>
+      <div className={`projects h-[100vh] w-full lg:flex lg:flex-col hidden overflow-hidden relative lg:bg-projectsBg bg-white bg-cover bg-center`} ref={ProjectRef}>
         <div className='h-full z-10 top-0 left-0 w-full absolute flex justify-center items-center'>
           <p className='projectsHeading lg:text-[16rem] text-5xl font-Monoton lg:font-bold font-normal tracking-wide clip-your-needful-style'>Projects</p>
         </div>
