@@ -154,7 +154,7 @@ const Project = () => {
           <div className="bg-black rounded-lg shadow-lg flex lg:flex-row flex-col lg:items-center p-6 gap-2 justify-center lg:hover:scale-105 lg:transform lg:transition lg:duration-200">
             <div className="flex-shrink-0 w-full lg:w-1/3 h-full">
               <img
-                src="./project2.png"
+                src="./project3.png"
                 alt="GPT - AI ChatApp"
                 className="w-full h-48 lg:h-auto object-cover rounded-lg"
               />
@@ -182,14 +182,14 @@ const Project = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://offsetcommunications.africa"
+                    href="https://github.com/TechGuy9810/ChatAi"
                   >
                     <FaGithub className="lg:size-6 size-6 text-white cursor-pointer" />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://offsetcommunications.africa"
+                    href="https://chatai-production-647b.up.railway.app"
                     className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
                   >
                     <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">

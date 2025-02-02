@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type';
 import { useRef } from 'react';
 import ReactCardFlip from 'react-card-flip';
-import { FaReact, FaNodeJs, FaCss3Alt, FaGithub} from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaCss3Alt, FaGithub, FaStar} from 'react-icons/fa';
 import { SiMongodb, SiRazorpay, SiCloudinary, SiSocketdotio } from "react-icons/si";
 import { FaCircleCheck} from "react-icons/fa6";
 import { RiArrowGoBackFill } from "react-icons/ri";
@@ -584,11 +584,129 @@ tl2.to(".project-card1", {
         style={{ display: 'flex', flexWrap: 'nowrap' }}
       >
 <div className='h-full w-full z-30 flex justify-center items-center shrink-0 m-auto'></div>
-          <div className='h-full w-full z-30 flex justify-center items-center shrink-0 m-auto'>
-        <ReactCardFlip isFlipped={isFlipped.div1} flipDirection="horizontal">
-        <img src='./project1.png' className='lg:h-[70vh] lg:w-[60vw] h-[50vh] w-[80vw] rounded-lg' onClick={()=>setIsFlipped(prev=>({...prev,div1:true}))}/>
-        <div className='lg:h-[70vh] lg:w-[60vw] h-[55vh] w-[80vw] mx-auto flex flex-col justify-center text-center bg-white border border-gray-500 lg:p-10 p-6 shadow-md rounded-lg'>
-        <h1 className="lg:text-[2rem] text-[1.5rem] font-bold text-black">
+              
+<div className='h-full w-full z-30 flex justify-center items-center shrink-0 m-auto relative'>
+  <ReactCardFlip isFlipped={isFlipped.div3} flipDirection="horizontal">
+    {/* Front Side - Image with Blur Effect */}
+    <div className="relative">
+      <img 
+        src='./project3.png' 
+        className='lg:h-[70vh] lg:w-[60vw] h-[45vh] sm:h-[50vh] sm:w-[85vw] w-[90vw] rounded-lg grayscale hover:grayscale-0 transition-all duration-300'
+        onClick={()=>setIsFlipped(prev=>({...prev, div3:true}))}
+      />
+    </div>
+
+    {/* Back Side - Project Details */}
+    <div className='lg:h-[70vh] lg:w-[60vw] h-[55vh] sm:h-[60vh] sm:w-[85vw] w-[90vw] mx-auto flex flex-col justify-center text-center bg-white border border-gray-500 lg:p-10 sm:p-6 p-4 shadow-md rounded-lg'>
+      <h1 className="lg:text-[2rem] text-[1.5rem] sm:text-[1.7rem] font-bold text-black">
+        AI ChatBot
+      </h1>
+      <div className="text-left lg:pt-6 lg:pb-6 sm:pt-4 sm:pb-4 pt-2 pb-2">
+        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Key Features</h2>
+        <ul className="list-disc list-inside text-gray-600 space-y-1 text-sm sm:text-base">
+          <li>Integrated Google's Gemini for live solutions.</li>
+          <li>Responsive design powered by Tailwind CSS for all devices.</li>
+          <li>Chat history storage functionality</li>
+          <li>Chat, Image, and Code Generation.</li>
+        </ul>
+      </div>
+      <div className="text-left">
+        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Technologies Used (MERN)</h2>
+        <div className="flex justify-center items-center space-x-3 sm:space-x-4 text-gray-600 lg:text-3xl sm:text-2xl text-xl">
+          <FaReact title="React.js" />
+          <FaNodeJs title="Node.js" />
+          <SiMongodb title="MongoDB"/>
+          <FaCss3Alt title="Tailwind CSS" />
+        </div>
+      </div>
+      <div className="text-left lg:pt-6 lg:pb-6 sm:pt-4 sm:pb-4 pt-2 pb-2">
+        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Project Links</h2>
+        <div className="flex justify-center items-center space-x-3 sm:space-x-4">
+          <a href='https://github.com/TechGuy9810/ChatAi' target='blank'>
+            <FaGithub className='cursor-pointer text-gray-600 lg:text-3xl sm:text-2xl text-xl'/>
+          </a>
+          <a href='https://chatai-production-647b.up.railway.app' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 sm:pt-2 sm:pb-3 sm:pl-3 sm:pr-3 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>Live Site</a>
+          <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 sm:pt-2 sm:pb-3 sm:pl-3 sm:pr-3 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600' onClick={()=>setIsFlipped(prev=>({...prev, div3:false}))}>
+            <RiArrowGoBackFill />
+          </button>
+        </div>
+      </div>
+    </div>
+  </ReactCardFlip>
+</div>
+
+
+         
+<div className='h-full w-full z-30 flex justify-center items-center shrink-0 m-auto relative'>
+  <ReactCardFlip isFlipped={isFlipped.div2} flipDirection="horizontal">
+    {/* Front Side - Image */}
+    <div className="relative">
+      <img
+        src='./project2.png'
+        className='lg:h-[70vh] lg:w-[60vw] h-[45vh] sm:h-[50vh] sm:w-[85vw] w-[90vw] rounded-lg grayscale hover:grayscale-0 transition-all duration-300'
+        onClick={() => setIsFlipped(prev => ({ ...prev, div2: true }))}
+      />
+    </div>
+
+    {/* Back Side - Project Details */}
+    <div className='lg:h-[70vh] lg:w-[60vw] h-[55vh] w-[80vw] mx-auto flex flex-col justify-center text-center bg-white border border-gray-500 lg:p-10 p-6 shadow-md rounded-lg'>
+      <h1 className="lg:text-[2rem] text-[1.5rem] font-bold text-black">
+        Realtime Web Chat App.
+      </h1>
+      <div className="text-left lg:pt-6 lg:pb-6 pt-3 pb-3">
+        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Key Features</h2>
+        <ul className="list-disc list-inside text-gray-600 space-y-1">
+          <li>Image, emoji, and video sharing capabilities.</li>
+          <li>Image Downloading Functionality</li>
+          <li>Responsive design for all devices.</li>
+          <li>Real-time features: User online status and typing indicator.</li>
+        </ul>
+      </div>
+      <div className="text-left">
+        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Technologies Used (MERN)</h2>
+        <div className="flex justify-center items-center space-x-4 text-gray-600 lg:text-3xl text-xl">
+          <FaReact title="React.js" />
+          <FaNodeJs title="Node.js" />
+          <SiMongodb title="MongoDB"/>
+          <SiCloudinary title="Cloudinary" />
+          <SiSocketdotio title="Socket.IO" />
+          <FaCss3Alt title="Tailwind CSS" />
+        </div>
+      </div>
+
+      <div className="text-left lg:pt-6 lg:pb-6 pt-3 pb-3">
+        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Project Links</h2>
+        <div className="flex justify-center items-center space-x-4">
+          <a href='https://github.com/TechGuy9810/ChatApp' target='blank'>
+            <FaGithub className='cursor-pointer text-gray-600 lg:text-3xl text-xl'/>
+          </a>
+          <a href='https://chatapp-production-e859.up.railway.app/' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>
+            Live Site
+          </a>
+          <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600' onClick={() => setIsFlipped(prev => ({ ...prev, div2: false }))}>
+            <RiArrowGoBackFill />
+          </button>
+        </div>
+      </div>
+    </div>
+  </ReactCardFlip>
+</div>
+
+         
+<div className='h-full w-full z-30 flex justify-center items-center shrink-0 m-auto relative'>
+  <ReactCardFlip isFlipped={isFlipped.div1} flipDirection="horizontal">
+    {/* Front Side - Image */}
+    <div className="relative">
+      <img
+        src='./project1.png'
+        className='lg:h-[70vh] lg:w-[60vw] h-[45vh] sm:h-[50vh] sm:w-[85vw] w-[90vw] rounded-lg grayscale hover:grayscale-0 transition-all duration-300'
+        onClick={() => setIsFlipped(prev => ({ ...prev, div1: true }))}
+      />
+    </div>
+
+    {/* Back Side - Project Details */}
+    <div className='lg:h-[70vh] lg:w-[60vw] h-[55vh] w-[80vw] mx-auto flex flex-col justify-center text-center bg-white border border-gray-500 lg:p-10 p-6 shadow-md rounded-lg'>
+      <h1 className="lg:text-[2rem] text-[1.5rem] font-bold text-black">
         Hotel Reservation Site
       </h1>
       <div className="text-left lg:pt-6 lg:pb-6 pt-3 pb-3">
@@ -602,7 +720,7 @@ tl2.to(".project-card1", {
       </div>
       <div className="text-left">
         <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Technologies Used (MERN)</h2>
-        <div className="flex justify-c items-center space-x-4 text-gray-600 lg:text-3xl text-xl">
+        <div className="flex justify-center items-center space-x-4 text-gray-600 lg:text-3xl text-xl">
           <FaReact title="React.js" />
           <FaNodeJs title="Node.js" />
           <SiMongodb title="MongoDB"/>
@@ -612,95 +730,23 @@ tl2.to(".project-card1", {
       </div>
       <div className="text-left lg:pt-6 lg:pb-6 pt-3 pb-3">
         <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Project Links</h2>
-        <div className="flex justify-c items-center space-x-4">
-        <a href='https://github.com/TechGuy9810/HotelSite/tree/master' target='blank'><FaGithub className='cursor-pointer text-gray-600 lg:text-3xl text-xl'/></a>
-      <a href='https://hotelbooking-production-542f.up.railway.app/' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>Live Site</a>
-      <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600' onClick={()=>setIsFlipped(prev=>({...prev,div1:false}))}><RiArrowGoBackFill /></button>
+        <div className="flex justify-center items-center space-x-4">
+          <a href='https://github.com/TechGuy9810/HotelSite/tree/master' target='blank'>
+            <FaGithub className='cursor-pointer text-gray-600 lg:text-3xl text-xl'/>
+          </a>
+          <a href='https://hotelbooking-production-542f.up.railway.app/' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>
+            Live Site
+          </a>
+          <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600' onClick={() => setIsFlipped(prev => ({ ...prev, div1: false }))}>
+            <RiArrowGoBackFill />
+          </button>
         </div>
       </div>
-        </div>
-         </ReactCardFlip>
-         </div>
+    </div>
+  </ReactCardFlip>
+</div>
 
 
-          <div className='h-full w-full z-30 flex justify-center items-center shrink-0 m-auto'>
-        <ReactCardFlip isFlipped={isFlipped.div2} flipDirection="horizontal">
-        <img src='./project2.png' className='lg:h-[70vh] lg:w-[60vw] h-[50vh] w-[80vw] rounded-lg' onClick={()=>setIsFlipped(prev=>({...prev,div2:true}))}/>
-        <div className='lg:h-[70vh] lg:w-[60vw] h-[55vh] w-[80vw] mx-auto flex flex-col justify-center text-center bg-white border border-gray-500 lg:p-10 p-6 shadow-md rounded-lg'>
-        <h1 className="lg:text-[2rem] text-[1.5rem] font-bold text-black">
-        Realtime Web Chat App.
-      </h1>
-      <div className="text-left lg:pt-6 lg:pb-6 pt-3 pb-3">
-        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Key Features</h2>
-        <ul className="list-disc list-inside text-gray-600 space-y-1">
-        <li>Image, emoji, and video sharing capabilities.</li>
-        <li>Image Downloading Functionality</li>
-          <li>Responsive design for all devices.</li>
-          <li>Real-time features: User online status and typing indicator.</li>
-        </ul>
-      </div>
-      <div className="text-left">
-        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Technologies Used (MERN)</h2>
-        <div className="flex justify-c items-center space-x-4 text-gray-600 lg:text-3xl text-xl">
-        <FaReact title="React.js" />
-          <FaNodeJs title="Node.js" />
-          <SiMongodb title="MongoDB"/>
-          <SiCloudinary title="Cloudinary" />
-          <SiSocketdotio title="Socket.IO" />
-          <FaCss3Alt title="Tailwind CSS" />
-        </div>
-      </div>
-
-      <div className="text-left lg:pt-6 lg:pb-6 pt-3 pb-3">
-        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Project Links</h2>
-        <div className="flex justify-c items-center space-x-4">
-        <a href='https://github.com/TechGuy9810/ChatApp' target='blank'><FaGithub className='cursor-pointer text-gray-600 lg:text-3xl text-xl'/></a>
-      <a href='https://chatapp-production-e859.up.railway.app/' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>Live Site</a>
-      <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600' onClick={()=>setIsFlipped(prev=>({...prev,div2:false}))}><RiArrowGoBackFill /></button>
-        </div>
-      </div>
-        </div>
-         </ReactCardFlip>
-         </div>
-
-
-         <div className='h-full w-full z-30 flex justify-center items-center shrink-0 m-auto'>
-        <ReactCardFlip isFlipped={isFlipped.div3} flipDirection="horizontal">
-        <img src='./project1.png' className='lg:h-[70vh] lg:w-[60vw] h-[50vh] w-[80vw] rounded-lg' onClick={()=>setIsFlipped(prev=>({...prev,div3:true}))}/>
-        <div className='lg:h-[70vh] lg:w-[60vw] h-[55vh] w-[80vw] mx-auto flex flex-col justify-center text-center bg-white border border-gray-500 lg:p-10 p-6 shadow-md rounded-lg'>
-        <h1 className="lg:text-[2rem] text-[1.5rem] font-bold text-black">
-        AI ChatBot
-      </h1>
-      <div className="text-left lg:pt-6 lg:pb-6 pt-3 pb-3">
-        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Key Features</h2>
-        <ul className="list-disc list-inside text-gray-600 space-y-1">
-          <li>Integrated Google's gemini for the live solutions.</li>
-          <li>Responsive design powered by Tailwind CSS for all devices.</li>
-          <li>Chat history storage functionality</li>
-          <li>Chat, Image and Code Generation.</li>
-        </ul>
-      </div>
-      <div className="text-left">
-        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Technologies Used (MERN)</h2>
-        <div className="flex justify-c items-center space-x-4 text-gray-600 lg:text-3xl text-xl">
-          <FaReact title="React.js" />
-          <FaNodeJs title="Node.js" />
-          <SiMongodb title="MongoDB"/>
-          <FaCss3Alt title="Tailwind CSS" />
-        </div>
-      </div>
-      <div className="text-left lg:pt-6 lg:pb-6 pt-3 pb-3">
-        <h2 className="lg:text-lg text-md font-semibold text-gray-800 mb-2">Project Links</h2>
-        <div className="flex justify-c items-center space-x-4">
-        <FaGithub className='cursor-pointer text-gray-600 lg:text-3xl text-xl'/>
-      <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>Live Site</button>
-      <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600' onClick={()=>setIsFlipped(prev=>({...prev,div3:false}))}><RiArrowGoBackFill /></button>
-        </div>
-      </div>
-        </div>
-         </ReactCardFlip>
-         </div>
-         
       </div>
 </div>
 
@@ -708,6 +754,75 @@ tl2.to(".project-card1", {
   <div className="bg-black text-white py-10">
     <h1 className="text-4xl font-bold mb-10 font-Monoton text-center">Selected Projects</h1>
     <div className="flex flex-col gap-8 lg:gap-12">
+
+            {/* Project 3: GPT - AI ChatApp */}
+            <div className="project-card3 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
+        <div className="flex-shrink-0 w-full lg:w-1/3">
+          <img
+            src="./project3.png"
+            alt="GPT - AI ChatApp"
+            className="w-full h-48 lg:h-auto object-cover rounded-lg"
+          />
+        </div>
+        <div className="flex flex-col flex-grow space-y-4 h-full">
+          <h2 className="lg:text-4xl text-2xl font-semibold text-white">
+            GPT - AI ChatApp
+          </h2>
+          <div className="text-sm text-gray-300 flex-grow space-y-2">
+            <p>Web AI ChatApp where users can chat with google gemini and can also attach media and ask queries.</p>
+            <p>1) Integrated Google gemini API.</p>
+            <p>2) Smooth authentication using Clerk.</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">React</span>
+            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Node.js</span>
+            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Express.js</span>
+            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Tailwindcss</span>
+            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">MongoDB</span>
+            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Google Gemini</span>
+            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">clerk</span>
+          </div>
+          <div className="mt-4">
+            <div className="no-underline flex lg:gap-4 gap-4 w-auto whitespace-nowrap items-center">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/TechGuy9810/ChatAi"
+              >
+                <FaGithub className="lg:size-6 size-6 text-white cursor-pointer" />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://chatai-production-647b.up.railway.app"
+                className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
+              >
+                <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="4"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </span>
+                <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
+                  live
+                </span>
+                <span className="relative invisible">live</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Project 1: Realtime Web ChatApp */}
       <div className="project-card1 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
         <div className="flex-shrink-0 w-full lg:w-1/3">
@@ -848,73 +963,6 @@ tl2.to(".project-card1", {
         </div>
       </div>
 
-      {/* Project 3: GPT - AI ChatApp */}
-      <div className="project-card3 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
-        <div className="flex-shrink-0 w-full lg:w-1/3">
-          <img
-            src="./project2.png"
-            alt="GPT - AI ChatApp"
-            className="w-full h-48 lg:h-auto object-cover rounded-lg"
-          />
-        </div>
-        <div className="flex flex-col flex-grow space-y-4 h-full">
-          <h2 className="lg:text-4xl text-2xl font-semibold text-white">
-            GPT - AI ChatApp
-          </h2>
-          <div className="text-sm text-gray-300 flex-grow space-y-2">
-            <p>Web AI ChatApp where users can chat with google gemini and can also attach media and ask queries.</p>
-            <p>1) Integrated Google gemini API.</p>
-            <p>2) Smooth authentication using Clerk.</p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">React</span>
-            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Node.js</span>
-            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Express.js</span>
-            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Tailwindcss</span>
-            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">MongoDB</span>
-            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Google Gemini</span>
-            <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">clerk</span>
-          </div>
-          <div className="mt-4">
-            <div className="no-underline flex lg:gap-4 gap-4 w-auto whitespace-nowrap items-center">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/TechGuy9810/ChatApp"
-              >
-                <FaGithub className="lg:size-6 size-6 text-white cursor-pointer" />
-              </a>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://offsetcommunications.africa"
-                className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
-              >
-                <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="4"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    ></path>
-                  </svg>
-                </span>
-                <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
-                  live
-                </span>
-                <span className="relative invisible">live</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
