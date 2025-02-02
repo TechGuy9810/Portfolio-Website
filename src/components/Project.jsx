@@ -9,6 +9,75 @@ const Project = () => {
           Selected Projects
         </h1>
         <div className="flex flex-col gap-8 lg:gap-10">
+
+          {/* Project 3 */}
+          <div className="bg-black rounded-lg shadow-lg flex lg:flex-row flex-col lg:items-center p-6 gap-2 justify-center lg:hover:scale-105 lg:transform lg:transition lg:duration-200">
+            <div className="flex-shrink-0 w-full lg:w-1/3 h-full">
+              <img
+                src="./project3.png"
+                alt="GPT - AI ChatApp"
+                className="w-full h-48 lg:h-auto object-cover rounded-lg"
+              />
+            </div>
+            <div className="flex flex-col flex-grow space-y-4 h-full">
+              <h2 className="lg:text-4xl text-2xl font-semibold text-white">
+                GPT - AI ChatApp
+              </h2>
+              <div className="text-sm text-gray-300 flex-grow space-y-2">
+                <p>Web AI ChatApp where users can chat with Google Gemini and can also attach media and ask queries.</p>
+                <p>1) Integrated Google Gemini API.</p>
+                <p>2) Smooth authentication using Clerk.</p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">React</span>
+                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Node.js</span>
+                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Express.js</span>
+                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Tailwindcss</span>
+                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">MongoDB</span>
+                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Google Gemini</span>
+                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Clerk</span>
+              </div>
+              <div className="mt-4">
+                <div className="no-underline flex lg:gap-4 gap-4 w-auto whitespace-nowrap items-center">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/TechGuy9810/ChatAi"
+                  >
+                    <FaGithub className="lg:size-6 size-6 text-white cursor-pointer" />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://chatai-production-647b.up.railway.app"
+                    className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
+                  >
+                    <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="4"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
+                      live
+                    </span>
+                    <span className="relative invisible">live</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Project 1 */}
           <div className="bg-black rounded-lg shadow-lg flex lg:flex-row flex-col lg:items-center p-6 gap-2 justify-center lg:hover:scale-105 lg:transform lg:transition lg:duration-200">
             <div className="flex-shrink-0 w-full lg:w-1/3 h-full">
@@ -150,73 +219,6 @@ const Project = () => {
             </div>
           </div>
 
-          {/* Project 3 */}
-          <div className="bg-black rounded-lg shadow-lg flex lg:flex-row flex-col lg:items-center p-6 gap-2 justify-center lg:hover:scale-105 lg:transform lg:transition lg:duration-200">
-            <div className="flex-shrink-0 w-full lg:w-1/3 h-full">
-              <img
-                src="./project3.png"
-                alt="GPT - AI ChatApp"
-                className="w-full h-48 lg:h-auto object-cover rounded-lg"
-              />
-            </div>
-            <div className="flex flex-col flex-grow space-y-4 h-full">
-              <h2 className="lg:text-4xl text-2xl font-semibold text-white">
-                GPT - AI ChatApp
-              </h2>
-              <div className="text-sm text-gray-300 flex-grow space-y-2">
-                <p>Web AI ChatApp where users can chat with Google Gemini and can also attach media and ask queries.</p>
-                <p>1) Integrated Google Gemini API.</p>
-                <p>2) Smooth authentication using Clerk.</p>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">React</span>
-                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Node.js</span>
-                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Express.js</span>
-                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Tailwindcss</span>
-                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">MongoDB</span>
-                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Google Gemini</span>
-                <span className="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Clerk</span>
-              </div>
-              <div className="mt-4">
-                <div className="no-underline flex lg:gap-4 gap-4 w-auto whitespace-nowrap items-center">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/TechGuy9810/ChatAi"
-                  >
-                    <FaGithub className="lg:size-6 size-6 text-white cursor-pointer" />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://chatai-production-647b.up.railway.app"
-                    className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
-                  >
-                    <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="4"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        ></path>
-                      </svg>
-                    </span>
-                    <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
-                      live
-                    </span>
-                    <span className="relative invisible">live</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
