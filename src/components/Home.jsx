@@ -6,13 +6,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type';
 import { useRef } from 'react';
 import ReactCardFlip from 'react-card-flip';
-import { FaReact, FaNodeJs, FaCss3Alt, FaGithub, FaStar} from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaCss3Alt, FaGithub} from 'react-icons/fa';
 import { SiMongodb, SiRazorpay, SiCloudinary, SiSocketdotio } from "react-icons/si";
 import { FaCircleCheck} from "react-icons/fa6";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { LuMoveDown } from "react-icons/lu";
 import { Link} from "react-router-dom";
 import FAQ from './Faq';
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 gsap.registerPlugin(useGSAP,ScrollTrigger,matchMedia);
 const Home = () => {
   const containerRef = useRef(null);
@@ -29,6 +30,7 @@ const Home = () => {
     { x: 1035, y: 615, ref: popupRefs[4] },
     {x: 1152, y: 800, ref:popupRefs[5]}
   ];
+  const headingRef = useRef(null);
   const [isFlipped,setIsFlipped] = useState({
     div1:false,
     div2:false,
@@ -37,7 +39,12 @@ const Home = () => {
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   })
-
+const [text] = useTypewriter({
+  words:['Developer', 'MERN Developer', 'React Developer'],
+  loop:{},
+  typeSpeed:40,
+  deleteSpeed:20
+})
 useGSAP(()=>{
   let mm = gsap.matchMedia();
   const mySplitText = new SplitType('#creatorName');
@@ -50,6 +57,41 @@ useGSAP(()=>{
     setTimeout(() => {
     SplitType.revert('#creatorName')
   }, "1300");
+  
+  gsap.fromTo(
+    ".projectHeading",
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".projectHeading",
+        start: "top 92%", // Trigger animation when heading reaches 80% of viewport height
+        end:"bottom 40%",
+        toggleActions: "play none none none",
+        scrub:true
+      }
+    }
+  );
+  gsap.fromTo(
+    headingRef.current,
+    { opacity: 0, y: 50 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: headingRef.current,
+        start: "top 92%", // Trigger animation when heading reaches 80% of viewport height
+        end:"bottom 40%",
+        toggleActions: "play none none none",
+        scrub:true,
+      }
+    }
+  );
 mm.add("(max-width: 700px)",()=>{
 
   let tl = gsap.timeline({
@@ -59,7 +101,7 @@ mm.add("(max-width: 700px)",()=>{
        scrub:true,
        scroller:"body",
        start:"top 90%",
-       end:"bottom 80%",
+       end:"bottom 50%",
     }
   });
 tl.to("#javascript",{
@@ -89,11 +131,11 @@ tl.to("#javascript",{
 }).to("#html, #css",{
   opacity:1,
   filter:"blur(0px)",
-  delay:0.4
+  delay:0.5
 }).to("#dsa",{
   opacity:1,
   filter:"blur(0px)",
-  delay:0.4
+  delay:0.5
 }).to("#computerNetworks, #operatingSystem",{
   opacity:1,
   filter:"blur(0px)",
@@ -102,7 +144,7 @@ tl.to("#javascript",{
 
   const path = svgRefPhone.current;
 const pathLength = path.getTotalLength();
-gsap.set(path,{strokeDasharray:8});
+gsap.set(path,{strokeDasharray:pathLength});
 gsap.fromTo(path,{
 strokeDashoffset:pathLength,
 },{
@@ -110,9 +152,8 @@ strokeDashoffset:0,
 ease:"none",
 scrollTrigger:{
   trigger:'.svgContainer',
-  start:"top 8%",
-  end:"bottom 0",
-  pin: true,
+  start:"top 70%",
+  end:"bottom 25%",
   scrub:true,
         onUpdate: self => {
           const currentOffset = gsap.getProperty(path, "strokeDashoffset");
@@ -128,7 +169,8 @@ scrollTrigger:{
      start:"top 8%",
      end:"bottom 70%",
     //  markers:"true",
-     scrub:true,
+     scrub:1,
+     snap: true
    },
    ease: "power2.inOut",
    position:"fixed",
@@ -361,7 +403,7 @@ const tl2 = gsap.timeline({
     start: "top 90%", // Start when the top of the container is at 80% of the viewport
     end: "bottom 80%", // End when the bottom of the container is at 20% of the viewport // Smooth animation while scrolling
     scrub:1,
-    snap: 1 / 3
+    snap:0.1
   },
 });
 
@@ -383,10 +425,10 @@ tl2.to(".project-card1", {
     <ReactLenis root>
     <div className="w-full h-full bg-black">
       <div className='heroSection z-[0] lg:bg-heroSectionImage md:bg-heroSectionImage bg-svgImage bg-cover bg-center bg-no-repeat w-full max-w-screen lg:h-[90vh] h-[92vh] overflow-hidden'>
-           <p id='creatorName' className='name lg:left-[14%] md:left-[18%] left-[10%] clip-your-needful-style absolute lg:top-[28%] md:top-top-[25%] top-[28%] flex text-center lg:text-[9rem] md:text-[4rem] text-[40px] lg:text-black md:text-black text-white font-extrabold font-sans whitespace-nowrap'>Abhishek Singh.</p>
-           <div className='designation lg:top-[50%] md:top-[38%] top-[36%] flex flex-col absolute lg:h-[45%] h-[25%] w-full'>
+           <p id='creatorName' className='name lg:left-[14%] md:left-[18%] left-[11%] clip-your-needful-style absolute lg:top-[28%] md:top-top-[25%] top-[24%] flex text-center lg:text-[9rem] md:text-[4rem] text-[40px] lg:text-black md:text-black text-white font-extrabold font-sans whitespace-nowrap'>Abhishek Singh.</p>
+           <div className='designation lg:top-[50%] md:top-[38%] top-[32%] flex flex-col absolute lg:h-[45%] h-[25%] w-full'>
            <p className='w-full text-center text-[3rem] font-extrabold text-black h-auto lg:block md:hidden hidden'>Full Stack Developer</p>
-            <p className='w-full text-center lg:hidden md:flex flex lg:text-[3rem] md:text-[1.5rem] lg:font-extrabold text-[1rem] lg:text-black md:text-black text-white md:font-semibold font-semibold h-auto pl-10 pr-10 pt-0 pb-5'>I'm fullStack Developer Specializing in MERN Stack. I like to build Scalabel Saas Apps that can hepl people, I'm passionate about Artificial Intelligence and Machine learing and I find it Fun to integrate them in my Apps</p>
+            <p className='w-full lg:hidden md:flex flex lg:text-[3rem] md:text-[1.5rem] lg:font-extrabold text-[1.5rem] lg:text-black md:text-black text-white md:font-semibold font-semibold h-auto pl-10 pr-10 pt-0 pb-5 justify-center'>I am {text} <Cursor/></p>
             <div className='w-full h-full'>
             <div className='w-full directs flex items-start justify-center lg:gap-10 gap-5 lg:pt-0 pt-2'>
             <a href='./resume.pdf' target='blank' className="block rounded-md px-3.5 py-1.5 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium lg:border-black md:border-black border-white lg:text-black md:text-black text-white">
@@ -469,7 +511,7 @@ tl2.to(".project-card1", {
       
       <div className={`skillsContainer lg:h-[60vh] h-[65vh] w-full flex flex-col items-center justify-center lg:bg-skillsBg bg-black bg-cover bg-center`}>
       <div className='skills lg:h-[15%] h-[10%] w-full flex justify-center items-end'>
-        <p className='skillsHeading lg:text-[2rem] text-[1.5rem] text-white lg:font-bold font-normal font-Monoton tracking-wide'>My Skills</p>
+        <p ref={headingRef} className='skillsHeading lg:text-[2rem] text-[1.5rem] text-white lg:font-bold font-normal font-Monoton tracking-wide'>My Skills</p>
       </div>
       <div className="skillsDiv grid grid-cols-2 lg:gap-x-10 lg:gap-y-6 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:p-6 pl-10 pr-10 p-6 lg:pt-12 lg:pb-12 lg:h-[85%] h-[90%]">
         <div id='react' className="lg:px-6 lg:py-4 px-4 py-2 text-white bg-black border border-white rounded-full text-center hover:bg-white hover:text-black flex justify-center items-center skillName blur-[10px] opacity-0 transition ease-bezier duration-500">
@@ -752,11 +794,11 @@ tl2.to(".project-card1", {
 
 <div className='projectParentDiv lg:hidden flex flex-col min-h-[90vh] h-auto w-full lg:pl-20 lg:pr-20 pl-10 pr-10'>
   <div className="bg-black text-white py-10">
-    <h1 className="text-4xl font-bold mb-10 font-Monoton text-center">Selected Projects</h1>
+    <h1 className="projectHeading text-4xl font-bold mb-10 font-Monoton text-center">Selected Projects</h1>
     <div className="flex flex-col gap-8 lg:gap-12">
 
             {/* Project 3: GPT - AI ChatApp */}
-            <div className="project-card3 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
+            <div className="project-card1 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
         <div className="flex-shrink-0 w-full lg:w-1/3">
           <img
             src="./project3.png"
@@ -824,7 +866,7 @@ tl2.to(".project-card1", {
       </div>
 
       {/* Project 1: Realtime Web ChatApp */}
-      <div className="project-card1 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
+      <div className="project-card2 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
         <div className="flex-shrink-0 w-full lg:w-1/3">
           <img
             src="./project2.png"
@@ -894,7 +936,7 @@ tl2.to(".project-card1", {
       </div>
 
       {/* Project 2: Hotel Reservation Site */}
-      <div className="project-card2 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
+      <div className="project-card3 bg-black border-2 border-white rounded-lg shadow-lg flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-20 lg:space-x-6 p-6">
         <div className="flex-shrink-0 w-full lg:w-1/3">
           <img
             src="./project1.png"

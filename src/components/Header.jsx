@@ -54,7 +54,7 @@ const Header = () => {
   return (
 
     <>
-     <p className={`lg:p-5 p-3 text-sm bg-gradient-to-br from-[#f58e18] via-[#f22a56] to-[#ff00c6] fixed left-[7%] rounded-xl font-semibold flex z-20 text-white ${mail==true?"top-[5rem] duration-200 ease-in-out":"top-[0] duration-200 ease-in-out"}`}>
+     <p className={`lg:p-5 p-3 text-sm bg-gradient-to-br from-[#f58e18] via-[#f22a56] to-[#ff00c6] fixed left-[7%] rounded-xl font-semibold lg:flex hidden z-20 text-white ${mail==true?"top-[5rem] duration-200 ease-in-out":"top-[0] duration-200 ease-in-out"}`}>
      abhishek981037@gmail.com</p>
     <div className="h-[8vh] w-full bg-black text-white flex justify-between sticky top-0 z-50 lg:border-b-0 border-b-2 border-white">
 <div className='h-full lg:w-[15%] w-[30%] flex lg:pl-20'>
