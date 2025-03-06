@@ -49,7 +49,7 @@ const Project = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://chatai-production-647b.up.railway.app"
+                    href="https://chatai-production-0614.up.railway.app"
                     className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
                   >
                     <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
@@ -120,7 +120,7 @@ const Project = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://chatapp-production-e859.up.railway.app/"
+                    href="https://chatapp-production-1ea3.up.railway.app/"
                     className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
                   >
                     <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
@@ -190,7 +190,7 @@ const Project = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://hotelbooking-production-542f.up.railway.app/"
+                    href="https://hotelbooking-production-6ff3.up.railway.app/"
                     className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
                   >
                     <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
