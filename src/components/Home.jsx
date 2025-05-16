@@ -667,7 +667,7 @@ tl2.to(".project-card1", {
           <a href='https://github.com/TechGuy9810/ChatAi' target='blank'>
             <FaGithub className='cursor-pointer text-gray-600 lg:text-3xl sm:text-2xl text-xl'/>
           </a>
-          <a href='https://chatai-production-0614.up.railway.app' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 sm:pt-2 sm:pb-3 sm:pl-3 sm:pr-3 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>Live Site</a>
+          <a href='https://chatai-production-ae38.up.railway.app' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 sm:pt-2 sm:pb-3 sm:pl-3 sm:pr-3 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>Live Site</a>
           <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 sm:pt-2 sm:pb-3 sm:pl-3 sm:pr-3 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600' onClick={()=>setIsFlipped(prev=>({...prev, div3:false}))}>
             <RiArrowGoBackFill />
           </button>
