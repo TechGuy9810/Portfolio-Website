@@ -722,7 +722,7 @@ tl2.to(".project-card1", {
           <a href='https://github.com/TechGuy9810/ChatApp' target='blank'>
             <FaGithub className='cursor-pointer text-gray-600 lg:text-3xl text-xl'/>
           </a>
-          <a href='https://chatapp-production-1ea3.up.railway.app/' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>
+          <a href='https://chatapp-production-106e.up.railway.app' target='blank' className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600'>
             Live Site
           </a>
           <button className='cursor-pointer lg:pt-2 lg:pb-4 lg:pl-4 lg:pr-4 pt-1 pb-1 pl-2 pr-2 border-2 border-gray-600 rounded-md font-bold flex justify-center items-center text-gray-600' onClick={() => setIsFlipped(prev => ({ ...prev, div2: false }))}>
@@ -836,7 +836,7 @@ tl2.to(".project-card1", {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://chatai-production-0614.up.railway.app"
+                href="https://chatai-production-ae38.up.railway.app"
                 className="relative inline-flex items-center justify-center pt-1 pb-1 pl-4 pr-4 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-white rounded-lg shadow-md group"
               >
                 <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">
